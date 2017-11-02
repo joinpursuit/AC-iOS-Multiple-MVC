@@ -27,6 +27,7 @@ class ZooAnimal {
         ZooAnimal(name: "Aardvark", imageNumber: 1, origin: "Africa", classification: "Mammal", info: """
 The Aardvark (Orycteropus afer) (‘Digging foot’), sometimes called ‘antbear’ is a medium-sized mammal native to Africa. The name comes from the Afrikaans/Dutch for ‘earth pig’, because early settlers from Europe thought it resembled a pig. However, the aardvark is not related to the pig, it is placed in its own order.
 
+
 The Aardvark is also not related to the South American anteater, despite sharing some characteristics and a similar resemblance. The closest living relatives of the aardvark are the elephant shrews (small insectivorous mammals native to Africa), the sirenians (herbivorous mammals that inhabit rivers), hyraxes (herbivorous mammals that live in Africa and the Middle East), tenrecs (a family of mammals found on Madagascar and parts of Africa) and elephants.
 """),
         ZooAnimal(name: "African Elephant", imageNumber: 2, origin: "Africa", classification: "Mammal", info: """
