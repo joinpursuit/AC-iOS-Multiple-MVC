@@ -14,23 +14,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let animals = ZooAnimal.zooAnimals
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return arrOfArrOfAnimals.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+            return arrOfArrOfAnimals[section][0].classification
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return arrOfArrOfAnimals[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let theAnimal = animals[indexPath.row]
+        
+        let theAnimal = arrOfArrOfAnimals[indexPath.section][indexPath.row]
         
         guard let cell = zooTableView.dequeueReusableCell(withIdentifier: "animalCell") as? AnimalTableViewCell else {
             return UITableViewCell()
         }
+        
         cell.animalNameLabel.text = theAnimal.name
         cell.originLabel.text = theAnimal.origin
         cell.animalImage.image = UIImage(named: "\(theAnimal.imageNumber)")
         return cell
     }
-    
-    
     
     
     override func viewDidLoad() {
