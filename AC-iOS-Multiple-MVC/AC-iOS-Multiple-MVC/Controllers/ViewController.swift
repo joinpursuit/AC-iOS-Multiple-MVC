@@ -74,17 +74,54 @@ extension ViewController: UITableViewDataSource, UITextViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let animal = animals[indexPath.row]
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
-            cell.animalImage.image = UIImage(named: String(animal.imageNumber))
-            cell.animalNameLabel?.text = animal.name
-            cell.animalOriginLabel?.text = animal.origin
-            return cell
+        switch indexPath.section {
+        case 0:
+            let mammal = mammals[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
+                cell.animalImage.image = UIImage(named: String(mammal.imageNumber))
+                cell.animalNameLabel?.text = mammal.name
+                cell.animalOriginLabel?.text = mammal.origin
+                return cell
+            }
+        case 1:
+            let amphibian = amphibians[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
+                cell.animalImage.image = UIImage(named: String(amphibian.imageNumber))
+                cell.animalNameLabel?.text = amphibian.name
+                cell.animalOriginLabel?.text = amphibian.origin
+                return cell
+            }
+        case 2:
+            let reptile = reptiles[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
+                cell.animalImage.image = UIImage(named: String(reptile.imageNumber))
+                cell.animalNameLabel?.text = reptile.name
+                cell.animalOriginLabel?.text = reptile.origin
+                return cell
+            }
+        case 3:
+            let insect = insects[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
+                cell.animalImage.image = UIImage(named: String(insect.imageNumber))
+                cell.animalNameLabel?.text = insect.name
+                cell.animalOriginLabel?.text = insect.origin
+                return cell
+            }
+        case 4:
+            let bird = birds[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
+                cell.animalImage.image = UIImage(named: String(bird.imageNumber))
+                cell.animalNameLabel?.text = bird.name
+                cell.animalOriginLabel?.text = bird.origin
+                return cell
+            }
+        default:
+                return UITableViewCell()
         }
         return UITableViewCell()
     }
-    
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
