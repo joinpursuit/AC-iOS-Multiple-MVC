@@ -141,7 +141,28 @@ extension ViewController: UITableViewDataSource, UITextViewDelegate {
                 else {
                     fatalError("No row was selected")
             }
-            animalDetailVC.animal = animals[selectedIndexPath.row]
+            
+//            animalDetailVC.animal = animals[selectedIndexPath.row]
+            
+            switch selectedIndexPath.section {
+            case 0:
+                animalDetailVC.animal = mammals[selectedIndexPath.row]
+            case 1:
+                animalDetailVC.animal = amphibians[selectedIndexPath.row]
+            case 2:
+                animalDetailVC.animal = reptiles[selectedIndexPath.row]
+            case 3:
+                animalDetailVC.animal = insects[selectedIndexPath.row]
+            case 4:
+                animalDetailVC.animal = birds[selectedIndexPath.row]
+            default:
+                fatalError("No!")
+            }
+            
+            
+            
+            
+            
         default:
             fatalError("Unexpected segue identifier")
             
