@@ -37,6 +37,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H3C-xQ-zDS" secondAttribute="trailing" constant="20" id="2eL-Qo-YNW"/>
+                            <constraint firstItem="rfN-e2-dqP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D47-VR-ooJ"/>
                             <constraint firstItem="wJJ-Nt-JB1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KzM-3u-jyC"/>
                             <constraint firstItem="wJJ-Nt-JB1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lt0-ES-ZU6"/>
                             <constraint firstItem="H3C-xQ-zDS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M8K-ck-Ehs"/>
@@ -44,8 +45,8 @@
                             <constraint firstItem="rfN-e2-dqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XOY-U3-vR5"/>
                             <constraint firstItem="wJJ-Nt-JB1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="frQ-f5-M2p"/>
                             <constraint firstItem="H3C-xQ-zDS" firstAttribute="top" secondItem="rfN-e2-dqP" secondAttribute="bottom" constant="30.5" id="h9q-ra-clK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfN-e2-dqP" secondAttribute="trailing" id="hyH-ir-BeZ"/>
                             <constraint firstItem="wJJ-Nt-JB1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kSt-rT-213"/>
+                            <constraint firstItem="wJJ-Nt-JB1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mi9-jH-gQd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H3C-xQ-zDS" secondAttribute="bottom" constant="38" id="pbW-4Y-oCP"/>
                             <constraint firstItem="rfN-e2-dqP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rfb-6h-5HZ"/>
                             <constraint firstItem="rfN-e2-dqP" firstAttribute="top" secondItem="wJJ-Nt-JB1" secondAttribute="bottom" constant="30.5" id="yg3-RB-CrQ"/>
