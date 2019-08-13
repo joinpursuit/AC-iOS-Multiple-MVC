@@ -125,15 +125,40 @@ class AnimalTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue") }
+        
+        switch segueIdentifier {
+        case "animalDetails":
+            guard let animalDetailVC = segue.destination as? ViewController else {
+                fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                fatalError("No row was selected")
+            }
+            switch selectedIndexPath.section {
+            case 0:
+                animalDetailVC.animal = ZooAnimal.mammals[selectedIndexPath.row]
+            case 1:
+                animalDetailVC.animal = ZooAnimal.birds[selectedIndexPath.row]
+            case 2:
+                animalDetailVC.animal = ZooAnimal.reptiles[selectedIndexPath.row]
+            case 3:
+                animalDetailVC.animal = ZooAnimal.insects[selectedIndexPath.row]
+            case 4:
+                animalDetailVC.animal = ZooAnimal.amphibians[selectedIndexPath.row]
+            default:
+                break
+            }
+            
+        default:
+            fatalError("Unexpected segue identifier")
+        }
     }
-    */
+ 
 
 }

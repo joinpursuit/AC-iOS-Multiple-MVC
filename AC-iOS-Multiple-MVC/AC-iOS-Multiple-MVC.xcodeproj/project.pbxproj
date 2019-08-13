@@ -62,8 +62,8 @@
 			children = (
 				08FB1E092303400400E8546D /* AnimalTableViewController.swift */,
 				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
-				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
 				08FB1E0723033FE600E8546D /* AnimalCellTableViewCell.swift */,
+				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
 				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
 				DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */,
 				DE07F5651FAB611300DA3ABA /* Assets.xcassets */,
