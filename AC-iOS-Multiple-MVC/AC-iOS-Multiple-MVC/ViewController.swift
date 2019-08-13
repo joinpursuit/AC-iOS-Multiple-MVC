@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var animalPhoto: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     private func setUpViews() {
         animalPhoto.image = UIImage(named: "\(animal.imageNumber)")
         nameLabel.text = animal.name
-        descriptionLabel.text = animal.info
+        descriptionTextView.text = animal.info
     }
 
 }
