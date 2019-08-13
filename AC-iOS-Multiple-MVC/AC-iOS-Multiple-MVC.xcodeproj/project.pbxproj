@@ -14,6 +14,7 @@
 		DE07F5691FAB611300DA3ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */; };
 		DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */; };
 		EA64D6B22303486300765420 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64D6B12303486300765420 /* AnimalTableViewCell.swift */; };
+		EA64D6B423034D4500765420 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64D6B323034D4500765420 /* AnimalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DE07F56A1FAB611300DA3ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZooAnimal.swift; path = ../ZooAnimal.swift; sourceTree = "<group>"; };
 		EA64D6B12303486300765420 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		EA64D6B323034D4500765420 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
+				EA64D6B323034D4500765420 /* AnimalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA64D6B423034D4500765420 /* AnimalViewController.swift in Sources */,
 				DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */,
 				EA64D6B22303486300765420 /* AnimalTableViewCell.swift in Sources */,
 				DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */,

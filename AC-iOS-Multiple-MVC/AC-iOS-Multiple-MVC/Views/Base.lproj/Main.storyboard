@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1055.072463768116" y="20.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Animal View Controller-->
         <scene sceneID="6Lv-43-M4q">
             <objects>
-                <viewController id="RVX-Ey-Xpe" sceneMemberID="viewController">
+                <viewController id="RVX-Ey-Xpe" customClass="AnimalViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tiC-iB-bYM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3m-Ti-B0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731.8840579710147" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1823" y="21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7xD-lY-afD">
