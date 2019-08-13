@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851364C023034484003599CA /* AnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851364BF23034484003599CA /* AnimalTableViewController.swift */; };
+		851364C2230344B6003599CA /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851364C1230344B6003599CA /* AnimalTableViewCell.swift */; };
+		851364C4230344CA003599CA /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851364C3230344CA003599CA /* AnimalViewController.swift */; };
+		851364C923034AB2003599CA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851364C823034AB2003599CA /* Functions.swift */; };
 		DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */; };
-		DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F5601FAB611300DA3ABA /* ViewController.swift */; };
 		DE07F5641FAB611300DA3ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5621FAB611300DA3ABA /* Main.storyboard */; };
 		DE07F5661FAB611300DA3ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5651FAB611300DA3ABA /* Assets.xcassets */; };
 		DE07F5691FAB611300DA3ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */; };
@@ -16,9 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851364BF23034484003599CA /* AnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewController.swift; sourceTree = "<group>"; };
+		851364C1230344B6003599CA /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		851364C3230344CA003599CA /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		851364C823034AB2003599CA /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		DE07F55B1FAB611300DA3ABA /* AC-iOS-Multiple-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-Multiple-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE07F5601FAB611300DA3ABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE07F5631FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE07F5651FAB611300DA3ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE07F5681FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		851364C5230344D8003599CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */,
+				DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DE07F5521FAB611300DA3ABA = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +71,14 @@
 		DE07F55D1FAB611300DA3ABA /* AC-iOS-Multiple-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
-				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
 				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
-				DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */,
+				851364BF23034484003599CA /* AnimalTableViewController.swift */,
+				851364C1230344B6003599CA /* AnimalTableViewCell.swift */,
+				851364C3230344CA003599CA /* AnimalViewController.swift */,
+				851364C823034AB2003599CA /* Functions.swift */,
+				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
+				851364C5230344D8003599CA /* Supporting Files */,
 				DE07F5651FAB611300DA3ABA /* Assets.xcassets */,
-				DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */,
 				DE07F56A1FAB611300DA3ABA /* Info.plist */,
 			);
 			path = "AC-iOS-Multiple-MVC";
@@ -139,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */,
+				851364C4230344CA003599CA /* AnimalViewController.swift in Sources */,
 				DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */,
+				851364C2230344B6003599CA /* AnimalTableViewCell.swift in Sources */,
 				DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */,
+				851364C023034484003599CA /* AnimalTableViewController.swift in Sources */,
+				851364C923034AB2003599CA /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
