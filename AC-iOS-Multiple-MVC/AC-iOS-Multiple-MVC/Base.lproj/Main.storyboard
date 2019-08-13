@@ -52,6 +52,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animalPhoto" destination="wJJ-Nt-JB1" id="p4N-pK-RgJ"/>
+                        <outlet property="descriptionLabel" destination="S6Z-sJ-jfh" id="J1Y-gL-AFM"/>
+                        <outlet property="nameLabel" destination="rfN-e2-dqP" id="Uzh-2F-pYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
