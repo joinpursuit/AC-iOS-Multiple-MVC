@@ -40,6 +40,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else {
+            return
+        }
+        switch segueIdentifier {
+        case "tableToDetailSegue":
+            guard let animalDetail = segue.destination as? AnimalDetailViewController else {
+                return
+            }
+            guard let indexPath = zooTableView.indexPathForSelectedRow else {
+                return
+            }
+            animalDetail.animal = arrOfArrOfAnimals[indexPath.section][indexPath.row]
+        default:
+            print("ruh roh")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

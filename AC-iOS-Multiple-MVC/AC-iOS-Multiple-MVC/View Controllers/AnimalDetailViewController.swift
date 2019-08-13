@@ -15,12 +15,21 @@ class AnimalDetailViewController: UIViewController {
     @IBOutlet weak var detailClassification: UILabel!
     @IBOutlet weak var detailInfo: UITextView!
     
+    var animal: ZooAnimal!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
     
+    private func setupView() {
+        detailImage.image = UIImage(named: "\(animal.imageNumber)")
+        detailName.text = animal.name
+        detailOrigin.text = "Origin: \(animal.origin)"
+        detailClassification.text = "Classification: \(animal.classification)"
+        detailInfo.text = animal.info
+        
+    }
 
     /*
     // MARK: - Navigation

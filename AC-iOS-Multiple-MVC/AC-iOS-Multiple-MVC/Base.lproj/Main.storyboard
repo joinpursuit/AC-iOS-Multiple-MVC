@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0IT-I8-bCm">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N64-oO-nTG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" rowHeight="100" id="HII-VS-2ox" customClass="AnimalTableViewCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
@@ -74,6 +74,7 @@
                                             <outlet property="animalImage" destination="1za-ma-k7B" id="kEa-xp-uTM"/>
                                             <outlet property="animalNameLabel" destination="sOv-ad-jlE" id="eB5-tF-2ZH"/>
                                             <outlet property="originLabel" destination="3vc-Ly-q5Z" id="tif-pQ-yPk"/>
+                                            <segue destination="fcC-kt-GX0" kind="show" identifier="tableToDetailSegue" id="NgX-k5-SPa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -88,13 +89,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eOr-GE-UXA"/>
                     <connections>
                         <outlet property="zooTableView" destination="N64-oO-nTG" id="WZZ-NW-2jC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
         </scene>
         <!--Animal Detail View Controller-->
         <scene sceneID="1uU-lm-cO6">
@@ -105,9 +107,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rKm-v1-HDG">
-                                <rect key="frame" x="20" y="44" width="374" height="254"/>
+                                <rect key="frame" x="20" y="88" width="374" height="220"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="254" id="Js3-1H-6EQ"/>
+                                    <constraint firstAttribute="height" constant="220" id="Js3-1H-6EQ"/>
                                     <constraint firstAttribute="width" constant="374" id="XnL-G8-dwi"/>
                                 </constraints>
                             </imageView>
@@ -164,7 +166,7 @@
                             <constraint firstItem="Jdv-FT-48z" firstAttribute="trailing" secondItem="u84-7u-Z7z" secondAttribute="trailing" constant="20" id="hpz-A4-IrT"/>
                             <constraint firstItem="rKm-v1-HDG" firstAttribute="top" secondItem="Jdv-FT-48z" secondAttribute="top" id="iht-8Q-yih"/>
                             <constraint firstItem="rKm-v1-HDG" firstAttribute="leading" secondItem="Jdv-FT-48z" secondAttribute="leading" constant="20" id="jiX-v4-Pcw"/>
-                            <constraint firstItem="9EW-mN-Z6h" firstAttribute="top" secondItem="rKm-v1-HDG" secondAttribute="bottom" constant="33" id="lex-38-u35"/>
+                            <constraint firstItem="9EW-mN-Z6h" firstAttribute="top" secondItem="rKm-v1-HDG" secondAttribute="bottom" constant="23" id="lex-38-u35"/>
                             <constraint firstItem="Jdv-FT-48z" firstAttribute="bottom" secondItem="u84-7u-Z7z" secondAttribute="bottom" constant="17" id="pcS-T4-dvo"/>
                             <constraint firstItem="GAB-Wb-Qaq" firstAttribute="leading" secondItem="Jdv-FT-48z" secondAttribute="leading" constant="68" id="yIv-C0-I58"/>
                             <constraint firstItem="hFf-ZT-yot" firstAttribute="top" secondItem="9EW-mN-Z6h" secondAttribute="bottom" constant="20" id="yyE-Fb-ka0"/>
@@ -181,7 +183,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUy-GM-N3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986.95652173913049" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1897.1014492753625" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Tq-Cs-oVA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0IT-I8-bCm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PT1-rB-VE7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XZQ-yv-4Wt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iR2-8T-0FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>
