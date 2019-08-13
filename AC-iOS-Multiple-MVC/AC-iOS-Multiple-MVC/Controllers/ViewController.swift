@@ -35,12 +35,20 @@ extension ViewController: UITableViewDataSource, UITextViewDelegate {
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let animal = animals[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalTableViewCell {
+            cell.animalImage.image = UIImage(named: String(animal.imageNumber))
+            cell.animalNameLabel?.text = animal.name
+            cell.animalOriginLabel?.text = animal.origin
+            return cell
+        }
+        return UITableViewCell()
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
 }

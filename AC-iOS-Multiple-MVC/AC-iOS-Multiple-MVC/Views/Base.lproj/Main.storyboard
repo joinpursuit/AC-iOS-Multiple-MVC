@@ -22,43 +22,41 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" rowHeight="100" id="TKT-jr-Y28" customClass="AnimalTableViewCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" rowHeight="80" id="TKT-jr-Y28" customClass="AnimalTableViewCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TKT-jr-Y28" id="vhv-4j-foB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dy2-AP-FAW">
-                                                    <rect key="frame" x="20" y="0.0" width="199" height="99.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="159" height="79.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="dy2-AP-FAW" secondAttribute="height" multiplier="2:1" id="Lw1-BO-lzu"/>
+                                                        <constraint firstAttribute="width" secondItem="dy2-AP-FAW" secondAttribute="height" multiplier="2:1" id="7sh-yx-fxh"/>
+                                                        <constraint firstAttribute="height" constant="79.5" id="oJj-G4-M27"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DXz-JD-vnk">
-                                                    <rect key="frame" x="239" y="0.0" width="175" height="99.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ems-Io-lf5">
-                                                            <rect key="frame" x="65" y="0.0" width="45" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-xZ-sDK">
-                                                            <rect key="frame" x="64.5" y="50" width="46" height="49.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ems-Io-lf5">
+                                                    <rect key="frame" x="199" y="10" width="215" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-xZ-sDK">
+                                                    <rect key="frame" x="199" y="50.5" width="215" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="DXz-JD-vnk" secondAttribute="trailing" id="0aB-1W-LjP"/>
-                                                <constraint firstItem="DXz-JD-vnk" firstAttribute="leading" secondItem="dy2-AP-FAW" secondAttribute="trailing" constant="20" id="91W-Oo-QF2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ems-Io-lf5" secondAttribute="trailing" id="5mL-8g-70l"/>
+                                                <constraint firstAttribute="trailing" secondItem="CZ1-xZ-sDK" secondAttribute="trailing" id="MBv-3r-yvB"/>
                                                 <constraint firstAttribute="bottom" secondItem="dy2-AP-FAW" secondAttribute="bottom" id="Nhq-II-9TX"/>
-                                                <constraint firstAttribute="bottom" secondItem="DXz-JD-vnk" secondAttribute="bottom" id="QR6-09-3OX"/>
-                                                <constraint firstItem="DXz-JD-vnk" firstAttribute="top" secondItem="vhv-4j-foB" secondAttribute="top" id="u7T-44-SCd"/>
+                                                <constraint firstItem="Ems-Io-lf5" firstAttribute="top" secondItem="vhv-4j-foB" secondAttribute="top" constant="10" id="UJ7-0R-uA8"/>
+                                                <constraint firstItem="CZ1-xZ-sDK" firstAttribute="top" secondItem="Ems-Io-lf5" secondAttribute="bottom" constant="20" id="Xph-L0-5Pt"/>
+                                                <constraint firstItem="Ems-Io-lf5" firstAttribute="leading" secondItem="dy2-AP-FAW" secondAttribute="trailing" constant="20" id="cNR-53-uyy"/>
+                                                <constraint firstItem="CZ1-xZ-sDK" firstAttribute="leading" secondItem="dy2-AP-FAW" secondAttribute="trailing" constant="20" id="oCR-Le-W02"/>
                                                 <constraint firstItem="dy2-AP-FAW" firstAttribute="top" secondItem="vhv-4j-foB" secondAttribute="top" id="y45-BG-P5I"/>
                                                 <constraint firstItem="dy2-AP-FAW" firstAttribute="leading" secondItem="vhv-4j-foB" secondAttribute="leading" constant="20" id="ym8-hx-mvh"/>
                                             </constraints>
