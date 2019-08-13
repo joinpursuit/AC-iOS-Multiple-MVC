@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let animals = ZooAnimal.zooAnimals
+    let mammals = ZooAnimal.mammals
+    let amphibians = ZooAnimal.amphibians
+    let reptiles = ZooAnimal.reptiles
+    let insects = ZooAnimal.insects
+    let birds = ZooAnimal.birds
     
     override func viewDidLoad() {
         super.viewDidLoad()
