@@ -12,10 +12,18 @@ class AnimalViewController: UIViewController {
 
     var animal: ZooAnimal!
     
+    @IBOutlet weak var animalImage: UIImageView!
+    @IBOutlet weak var animalNameLabel: UILabel!
+    @IBOutlet weak var animalDescription: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        animalImage.image = UIImage(named: String(animal.imageNumber))
+        animalNameLabel.text = animal.name
+        animalDescription.text = animal.info
     }
     
 

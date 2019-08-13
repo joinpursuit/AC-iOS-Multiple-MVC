@@ -132,6 +132,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d4y-b8-uT1"/>
                     </view>
+                    <connections>
+                        <outlet property="animalDescription" destination="Mvy-1I-R1k" id="eqX-cR-FaT"/>
+                        <outlet property="animalImage" destination="Nx1-Du-wxv" id="dPR-Zg-gCt"/>
+                        <outlet property="animalNameLabel" destination="hTt-hi-ox9" id="dK4-qi-5m8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3m-Ti-B0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
