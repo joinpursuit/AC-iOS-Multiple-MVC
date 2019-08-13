@@ -65,7 +65,7 @@
                                             <outlet property="animalImage" destination="dy2-AP-FAW" id="8xp-eP-2sv"/>
                                             <outlet property="animalNameLabel" destination="Ems-Io-lf5" id="JJ6-HZ-h4q"/>
                                             <outlet property="animalOriginLabel" destination="CZ1-xZ-sDK" id="Zkb-Xs-lkv"/>
-                                            <segue destination="RVX-Ey-Xpe" kind="show" id="dwd-iA-gQG"/>
+                                            <segue destination="RVX-Ey-Xpe" kind="show" identifier="segueToAnimalDetails" id="dwd-iA-gQG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

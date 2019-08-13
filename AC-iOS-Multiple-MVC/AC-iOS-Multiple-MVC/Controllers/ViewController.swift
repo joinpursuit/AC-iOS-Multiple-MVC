@@ -51,4 +51,25 @@ extension ViewController: UITableViewDataSource, UITextViewDelegate {
         return 80
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue")}
+        
+        switch segueIdentifier {
+        case "segueToAnimalDetails":
+            guard let animalDetailVC = segue.destination as? AnimalViewController
+                else {
+                    fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = self.tableView.indexPathForSelectedRow
+                else {
+                    fatalError("No row was selected")
+            }
+            animalDetailVC.animal = animals[selectedIndexPath.row]
+        default:
+            fatalError("Unexpected segue identifier")
+            
+        }
+    }
+    
 }
