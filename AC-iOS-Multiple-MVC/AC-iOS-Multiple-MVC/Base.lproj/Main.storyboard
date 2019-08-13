@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="175" y="113"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Animal Table View Controller-->
         <scene sceneID="lLQ-zM-bHR">
             <objects>
-                <tableViewController id="n8Q-mf-mV3" sceneMemberID="viewController">
+                <tableViewController id="n8Q-mf-mV3" customClass="AnimalTableViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wom-9A-qts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -24,23 +24,72 @@ class AnimalTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 0:
+            return ZooAnimal.mammals.count
+        case 1:
+            return ZooAnimal.birds.count
+        case 2:
+            return ZooAnimal.reptiles.count
+        case 3:
+            return ZooAnimal.insects.count
+        case 4:
+            return ZooAnimal.amphibians.count
+        default :
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Mammals"
+        case 1:
+            return "Birds"
+        case 2:
+            return "Reptiles"
+        case 3:
+            return "Insects"
+        case 4:
+            return "Amphibians"
+        default:
+            return ""
+        }
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        switch indexPath.section {
+        case 0:
+            return populateCell(indexPath: indexPath, animalArr: ZooAnimal.mammals)
+        case 1:
+            return populateCell(indexPath: indexPath, animalArr: ZooAnimal.birds)
+        case 2:
+            return populateCell(indexPath: indexPath, animalArr: ZooAnimal.reptiles)
+        case 3:
+            return populateCell(indexPath: indexPath, animalArr: ZooAnimal.insects)
+        case 4:
+            return populateCell(indexPath: indexPath, animalArr: ZooAnimal.amphibians)
+        default:
+            return UITableViewCell()
+        }
     }
-    */
+
+    func populateCell(indexPath: IndexPath, animalArr: [ZooAnimal]) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? AnimalCellTableViewCell {
+            let animal = animalArr[indexPath.row]
+            cell.animalImageView.image = UIImage(named: "\(animal.imageNumber)")
+            cell.animalNameLabel.text = animal.name
+            cell.originLabel.text = animal.origin
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
