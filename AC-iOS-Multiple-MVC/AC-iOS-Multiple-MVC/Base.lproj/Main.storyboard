@@ -120,7 +120,7 @@
                                     <outlet property="animalImageView" destination="Gv6-lH-y96" id="NWq-UY-b8K"/>
                                     <outlet property="animalNameLabel" destination="lDB-E0-hgn" id="ZQr-6c-IsN"/>
                                     <outlet property="originLabel" destination="CXK-2x-nlJ" id="3Ev-l5-gd1"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="YWq-iG-Qei"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="animalDetails" id="YWq-iG-Qei"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
