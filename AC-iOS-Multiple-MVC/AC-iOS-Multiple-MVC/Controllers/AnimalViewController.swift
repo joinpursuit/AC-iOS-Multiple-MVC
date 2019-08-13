@@ -10,6 +10,8 @@ import UIKit
 
 class AnimalViewController: UIViewController {
 
+    var animal: ZooAnimal!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
