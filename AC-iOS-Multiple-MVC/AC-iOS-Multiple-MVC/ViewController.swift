@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var animal: ZooAnimal!
+    
+    @IBOutlet weak var animalPhoto: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViews()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,7 +26,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    private func setUpViews() {
+        animalPhoto.image = UIImage(named: "\(animal.imageNumber)")
+        nameLabel.text = animal.name
+        descriptionTextView.text = animal.info
+    }
 
 }
 
