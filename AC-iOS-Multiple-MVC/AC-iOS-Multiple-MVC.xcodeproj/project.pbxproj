@@ -23,7 +23,7 @@
 		DE07F5651FAB611300DA3ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE07F5681FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE07F56A1FAB611300DA3ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimal.swift; sourceTree = "<group>"; };
+		DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZooAnimal.swift; path = ../ZooAnimal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		DE07F55D1FAB611300DA3ABA /* AC-iOS-Multiple-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
-				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
-				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
+				EA64D6AE2303441600765420 /* Models */,
+				EA64D6AF2303441F00765420 /* Controllers */,
+				EA64D6B02303442D00765420 /* Views */,
 				DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */,
 				DE07F5651FAB611300DA3ABA /* Assets.xcassets */,
 				DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */,
 				DE07F56A1FAB611300DA3ABA /* Info.plist */,
 			);
 			path = "AC-iOS-Multiple-MVC";
+			sourceTree = "<group>";
+		};
+		EA64D6AE2303441600765420 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA64D6AF2303441F00765420 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EA64D6B02303442D00765420 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
