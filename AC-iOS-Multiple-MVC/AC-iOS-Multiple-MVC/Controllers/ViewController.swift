@@ -34,10 +34,44 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource, UITextViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 5
     }
-
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Mammals"
+        case 1:
+            return "Amphibians"
+        case 2:
+            return "Reptiles"
+        case 3:
+            return "Insects"
+        case 4:
+            return "Birds"
+        default:
+            return "Some other critter"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return mammals.count
+        case 1:
+            return amphibians.count
+        case 2:
+            return reptiles.count
+        case 3:
+            return insects.count
+        case 4:
+            return birds.count
+        default:
+            return 0
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let animal = animals[indexPath.row]
