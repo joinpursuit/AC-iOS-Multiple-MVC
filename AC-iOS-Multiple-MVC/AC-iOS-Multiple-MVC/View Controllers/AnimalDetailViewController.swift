@@ -9,7 +9,12 @@
 import UIKit
 
 class AnimalDetailViewController: UIViewController {
-
+    @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var detailName: UILabel!
+    @IBOutlet weak var detailOrigin: UILabel!
+    @IBOutlet weak var detailClassification: UILabel!
+    @IBOutlet weak var detailInfo: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
