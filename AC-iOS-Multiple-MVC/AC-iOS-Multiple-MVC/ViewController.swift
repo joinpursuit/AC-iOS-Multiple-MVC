@@ -12,33 +12,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
   var allAnimals = ZooAnimal.zooAnimals
     
-    var mammal: [ZooAnimal] = []
-    var amphibian: [ZooAnimal] = []
-    var insect: [ZooAnimal] = []
-    var reptile: [ZooAnimal] = []
-    var bird: [ZooAnimal] = []
+    var mammal = ZooAnimal.mammals
+    var amphibian = ZooAnimal.amphibians
+    var insect = ZooAnimal.insects
+    var reptile = ZooAnimal.reptiles
+    var bird = ZooAnimal.birds
     
-    func separator () {
-        for i in ZooAnimal.zooAnimals {
-            if i.classification == .mammal {
-                mammal.append(i)
-            } else {
-                if i.classification == .amphibian {
-                    amphibian.append(i)
-                } else {
-                    if i.classification == .insect {
-                        insect.append(i)
-                    } else {
-                        if i.classification == .reptile {
-                            reptile.append(i)
-                        } else {
-                            if i.classification == .bird {
-                                bird.append(i)
-                            }
-                        }
-                    }
-                }
-            }
+//    func separator () {
+//        for i in ZooAnimal.zooAnimals {
+//            if i.classification == .mammal {
+//                mammal.append(i)
+//            } else {
+//                if i.classification == .amphibian {
+//                    amphibian.append(i)
+//                } else {
+//                    if i.classification == .insect {
+//                        insect.append(i)
+//                    } else {
+//                        if i.classification == .reptile {
+//                            reptile.append(i)
+//                        } else {
+//                            if i.classification == .bird {
+//                                bird.append(i)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -66,13 +66,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        switch section {
+        case 0:
         if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
-            cell.animalName.text = allAnimals[indexPath.row].name
-            cell.animalImage.image = UIImage(named: String( allAnimals[indexPath.row].imageNumber))
-            cell.animalOrigin.text = allAnimals[indexPath.row].origin
+            cell.animalName.text = mammal[indexPath.row].name
+            
+            cell.animalImage.image = UIImage(named: String( mammal[indexPath.row].imageNumber))
+            cell.animalOrigin.text = mammal[indexPath.row].origin
             return cell
         }
+        case 1:
+            
 
             return UITableViewCell()
     }
@@ -94,7 +98,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
                 
-            }
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -114,10 +118,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     override func viewDidLoad() {
         super.viewDidLoad()
-        separator()
+       // separator()
     tableView.dataSource = self
     tableView.delegate = self
                 // Do any additional setup after loading the view, typically from a nib.
             }
 }
-}
+
