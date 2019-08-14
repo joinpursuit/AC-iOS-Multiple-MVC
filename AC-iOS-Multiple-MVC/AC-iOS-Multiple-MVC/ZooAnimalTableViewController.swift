@@ -73,7 +73,7 @@ class ZooAnimalTableViewController: UITableViewController {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomZooCell", for: indexPath) as? ZooAnimalTableViewCell {
                 cell.nameLabel.text = mammals[indexPath.row].name
                 cell.classificationLabel.text = mammals[indexPath.row].classification
-                cell.animalImage.image = UIImage(named: String(mammals[indexPath.row].imageNumber))
+                cell.animalImage.image = UIImage(named: "\(mammals[indexPath.row].imageNumber)")
                 return cell
             }
         
@@ -81,7 +81,7 @@ class ZooAnimalTableViewController: UITableViewController {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomZooCell", for: indexPath) as? ZooAnimalTableViewCell {
                 cell.nameLabel.text = reptiles[indexPath.row].name
                 cell.classificationLabel.text = reptiles[indexPath.row].classification
-                cell.animalImage.image = UIImage(named: String(reptiles[indexPath.row].imageNumber))
+                cell.animalImage.image = UIImage(named: "\(reptiles[indexPath.row].imageNumber)")
                 return cell
             }
         case 2:
@@ -89,7 +89,7 @@ class ZooAnimalTableViewController: UITableViewController {
                     let bird = birds[indexPath.row]
                     cell.nameLabel.text = bird.name
                     cell.classificationLabel.text = bird.classification
-                    cell.animalImage.image = UIImage(named: String(bird.imageNumber))
+                    cell.animalImage.image = UIImage(named: "\(bird.imageNumber)")
                     return cell
             }
         case 3:
@@ -97,7 +97,7 @@ class ZooAnimalTableViewController: UITableViewController {
                 let insect = insects[indexPath.row]
                 cell.nameLabel.text = insect.name
                 cell.classificationLabel.text = insect.classification
-                cell.animalImage.image = UIImage(named: String(insect.imageNumber))
+                cell.animalImage.image = UIImage(named: "\(insect.imageNumber)")
                 return cell
             }
         case 4:
@@ -105,7 +105,7 @@ class ZooAnimalTableViewController: UITableViewController {
                 let amphibian = amphibians[indexPath.row]
                 cell.nameLabel.text = amphibian.name
                 cell.classificationLabel.text = amphibian.classification
-                cell.animalImage.image = UIImage(named: String(amphibian.imageNumber))
+                cell.animalImage.image = UIImage(named: "\(amphibian.imageNumber)")
                 return cell
             }
         default:

@@ -28,7 +28,7 @@ class ZooAnimalDetailViewController: UIViewController {
     private func setUpViews() {
         detailNameLabel.text = zooAnimal.name
         detailTextView.text = zooAnimal.info
-        detailImage.image = UIImage(named: String(zooAnimal.imageNumber))
+        detailImage.image = UIImage(named: "\(zooAnimal.imageNumber)")
     }
     
 
