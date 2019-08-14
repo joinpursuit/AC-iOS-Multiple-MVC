@@ -142,6 +142,8 @@ Zebras were the second species to diverge from the earliest proto-horses, after 
     static let mammals = ZooAnimal.zooAnimals.filter {$0.classification == "Mammal"}
     static let amphibians = ZooAnimal.zooAnimals.filter {$0.classification == "Amphibian"}
     static let reptiles = ZooAnimal.zooAnimals.filter {$0.classification == "Reptile"}
+    
+    static let allAnimals = [mammals, amphibians, insects, reptiles, birds]
 }
 
 

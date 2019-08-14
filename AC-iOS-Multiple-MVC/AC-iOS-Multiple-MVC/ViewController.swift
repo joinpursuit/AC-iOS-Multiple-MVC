@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch section {
+        switch indexPath.section {
         case 0:
         if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
             cell.animalName.text = mammal[indexPath.row].name
@@ -76,9 +76,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return cell
         }
         case 1:
-            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
+                cell.animalName.text = amphibian[indexPath.row].name
+                
+                cell.animalImage.image = UIImage(named: String( amphibian[indexPath.row].imageNumber))
+                cell.animalOrigin.text = amphibian[indexPath.row].origin
+                return cell
+            }
+        case 2:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
+                cell.animalName.text = insect[indexPath.row].name
+                
+                cell.animalImage.image = UIImage(named: String( insect[indexPath.row].imageNumber))
+                cell.animalOrigin.text = insect[indexPath.row].origin
+                return cell
+            }
+        case 3:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
+                cell.animalName.text = reptile[indexPath.row].name
+                
+                cell.animalImage.image = UIImage(named: String( reptile[indexPath.row].imageNumber))
+                cell.animalOrigin.text = reptile[indexPath.row].origin
+                return cell
+            }
+        case 4:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
+                cell.animalName.text = bird[indexPath.row].name
+                
+                cell.animalImage.image = UIImage(named: String( bird[indexPath.row].imageNumber))
+                cell.animalOrigin.text = bird[indexPath.row].origin
+                return cell
 
+            
+    }
+        default:
             return UITableViewCell()
+        }
+        return UITableViewCell()
     }
             
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -97,9 +131,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 return "will not execute"
             }
         }
-                
-    
-    
+            
     @IBOutlet weak var tableView: UITableView!
     
 
@@ -109,7 +141,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      //   if let tappedAnimalCell: animalCell = sender as? animalCell {
             if segue.identifier == "animalDetails" {
                 guard let indexPath = tableView.indexPathForSelectedRow else {return}
-                let animal = ZooAnimal.zooAnimals[indexPath.row]
+                let animal = ZooAnimal.allAnimals[indexPath.section][indexPath.row]
                 destination.animal = animal
                 
                 //let animalDetailVC: animalDetailVC = segue.destination as! animalDetailVC
@@ -123,5 +155,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     tableView.delegate = self
                 // Do any additional setup after loading the view, typically from a nib.
             }
-}
+    
 
+}
