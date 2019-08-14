@@ -41,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58FC6848230399CE00A0EC3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58FC6849230399E000A0EC3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58FC684A23039A1900A0EC3A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58FC68422303453C00A0EC3A /* AnimalListTableViewController.swift */,
+				58FC68442303475700A0EC3A /* AnimalListTableViewCell.swift */,
+				58FC68462303592C00A0EC3A /* AnimalDescriptionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		DE07F5521FAB611300DA3ABA = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +86,9 @@
 		DE07F55D1FAB611300DA3ABA /* AC-iOS-Multiple-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
-				58FC68422303453C00A0EC3A /* AnimalListTableViewController.swift */,
-				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
-				58FC68462303592C00A0EC3A /* AnimalDescriptionViewController.swift */,
-				58FC68442303475700A0EC3A /* AnimalListTableViewCell.swift */,
+				58FC6849230399E000A0EC3A /* Views */,
+				58FC6848230399CE00A0EC3A /* Models */,
+				58FC684A23039A1900A0EC3A /* Controllers */,
 				DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */,
 				DE07F5651FAB611300DA3ABA /* Assets.xcassets */,
 				DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */,
