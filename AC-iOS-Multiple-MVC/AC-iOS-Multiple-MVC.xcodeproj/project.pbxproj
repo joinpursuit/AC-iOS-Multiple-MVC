@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BCBC975230365E300D0A78E /* animalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBC974230365E300D0A78E /* animalCell.swift */; };
+		0BCBC97723036D7F00D0A78E /* animalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBC97623036D7F00D0A78E /* animalDetailVC.swift */; };
 		DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */; };
 		DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F5601FAB611300DA3ABA /* ViewController.swift */; };
 		DE07F5641FAB611300DA3ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5621FAB611300DA3ABA /* Main.storyboard */; };
 		DE07F5661FAB611300DA3ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5651FAB611300DA3ABA /* Assets.xcassets */; };
-		DE07F5691FAB611300DA3ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */; };
 		DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BCBC974230365E300D0A78E /* animalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalCell.swift; sourceTree = "<group>"; };
+		0BCBC97623036D7F00D0A78E /* animalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalDetailVC.swift; sourceTree = "<group>"; };
 		DE07F55B1FAB611300DA3ABA /* AC-iOS-Multiple-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-Multiple-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE07F5601FAB611300DA3ABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE07F5631FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE07F5651FAB611300DA3ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE07F5681FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE07F56A1FAB611300DA3ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,10 +61,11 @@
 				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
 				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
 				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
+				0BCBC974230365E300D0A78E /* animalCell.swift */,
 				DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */,
 				DE07F5651FAB611300DA3ABA /* Assets.xcassets */,
-				DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */,
 				DE07F56A1FAB611300DA3ABA /* Info.plist */,
+				0BCBC97623036D7F00D0A78E /* animalDetailVC.swift */,
 			);
 			path = "AC-iOS-Multiple-MVC";
 			sourceTree = "<group>";
@@ -126,7 +129,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE07F5691FAB611300DA3ABA /* LaunchScreen.storyboard in Resources */,
 				DE07F5661FAB611300DA3ABA /* Assets.xcassets in Resources */,
 				DE07F5641FAB611300DA3ABA /* Main.storyboard in Resources */,
 			);
@@ -139,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCBC97723036D7F00D0A78E /* animalDetailVC.swift in Sources */,
 				DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */,
+				0BCBC975230365E300D0A78E /* animalCell.swift in Sources */,
 				DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */,
 				DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */,
 			);
@@ -154,14 +158,6 @@
 				DE07F5631FAB611300DA3ABA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE07F5681FAB611300DA3ABA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
