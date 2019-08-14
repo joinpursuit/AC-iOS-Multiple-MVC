@@ -33,42 +33,94 @@ class AnimalListTableViewController: UITableViewController {
             guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
                 fatalError("No row was selected")
             }
-            animalDVC.animal = animals[selectedIndexPath.row]
+            
+            switch selectedIndexPath.section {
+            case 0:
+                 animalDVC.animal  = ZooAnimal.mammals[selectedIndexPath.row]
+            case 1:
+                 animalDVC.animal = ZooAnimal.amphibians[selectedIndexPath.row]
+            case 2:
+                 animalDVC.animal = ZooAnimal.reptiles[selectedIndexPath.row]
+            case 3:
+                 animalDVC.animal = ZooAnimal.birds[selectedIndexPath.row]
+            case 4:
+                 animalDVC.animal = ZooAnimal.insects[selectedIndexPath.row]
+            default:
+                 animalDVC.animal = animals[selectedIndexPath.row]
+            }
+            
         default:
             fatalError("Unexpected segue identifier")
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Mammals"
+        case 1:
+            return "Amphibians"
+        case 2:
+            return "Reptiles"
+        case 3:
+            return "Birds"
+        case 4:
+            return "Insects"
+        default:
+            return "no section found"
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        switch section {
+        case 0:
+            return ZooAnimal.mammals.count
+        case 1:
+            return ZooAnimal.amphibians.count
+        case 2:
+            return ZooAnimal.reptiles.count
+        case 3:
+            return ZooAnimal.birds.count
+        case 4:
+            return ZooAnimal.insects.count
+        default:
+            return 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let animal = animals[indexPath.row]
+        var animal = animals[indexPath.row]
+        switch indexPath.section {
+        case 0:
+            animal = ZooAnimal.mammals[indexPath.row]
+        case 1:
+            animal = ZooAnimal.amphibians[indexPath.row]
+        case 2:
+            animal = ZooAnimal.reptiles[indexPath.row]
+        case 3:
+            animal = ZooAnimal.birds[indexPath.row]
+        case 4:
+            animal = ZooAnimal.insects[indexPath.row]
+        default:
+            return UITableViewCell()
+        }
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "animalTVC", for: indexPath) as? AnimalListTableViewCell {
             cell.animalNameLabel.text = animal.name
             cell.animalOriginLabel.text = animal.origin
             cell.animalImage.image = UIImage(named: String(animal.imageNumber))
             return cell
         }
+        
       return UITableViewCell()
     }
-//    let movie = movies[indexPath.row] done
-//    if let cell = tableView.dequeueReusableCell(withIdentifier: "movieListCell", for: indexPath) as? MovieListTableViewCell {
-//        cell.genreLabel.text = movie.genre
-//        cell.titleLabel.text = movie.name
-//        cell.posterImage.image = UIImage(named: movie.posterImageName)
-//        return cell
-//    }
-//    return UITableViewCell()
-//}
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 229
