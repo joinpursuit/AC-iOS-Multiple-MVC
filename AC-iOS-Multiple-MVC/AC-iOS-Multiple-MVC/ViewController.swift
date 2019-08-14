@@ -50,26 +50,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tappedAnimalCell: animalCell = sender as? animalCell {
-            if segue.identifier == "animalCell" {
-                let animalDetailVC: animalDetailVC = segue.destination as! animalDetailVC
-                let cellIndexPath = tableView.indexPath(for: tappedAnimalCell)
+        guard let destination = segue.destination as?  animalDetailVC else {return}
+     //   if let tappedAnimalCell: animalCell = sender as? animalCell {
+            if segue.identifier == "animalDetails" {
+                guard let indexPath = tableView.indexPathForSelectedRow else {return}
+                let animal = ZooAnimal.zooAnimals[indexPath.row]
+                destination.animal = animal
+                
+                //let animalDetailVC: animalDetailVC = segue.destination as! animalDetailVC
+                //let cellIndexPath = tableView.indexPath(for: tappedAnimalCell)
             }
         }
-//        
 //        if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
 //            cell.animalName.text = allAnimals[indexPath.row].name
 //            cell.animalImage.image = UIImage(named: String( allAnimals[indexPath.row].imageNumber))
 //            cell.animalOrigin.text = allAnimals[indexPath.row].origin
 //            return cell
 //        }
-//        
+//
 //        return UITableViewCell()
 //    }
-    
-        
-//
-//                    // 5. Copy most of this code from cellForRow
+//            // 5. Copy most of this code from cellForRow
 //                    var cellMovie: Movie!
 //                    if cellIndexPath.section == 0 {
 //                        let actionMovies = self.filterMovies(for: .action)
@@ -96,11 +97,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            }
 //        }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
 
 
-}
 
