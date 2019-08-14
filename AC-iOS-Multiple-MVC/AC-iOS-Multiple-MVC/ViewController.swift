@@ -12,12 +12,53 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
   var allAnimals = ZooAnimal.zooAnimals
     
+    var mammal: [ZooAnimal] = []
+    var amphibian: [ZooAnimal] = []
+    var insect: [ZooAnimal] = []
+    var reptile: [ZooAnimal] = []
+    var bird: [ZooAnimal] = []
+    
+    func separator () {
+        for i in ZooAnimal.zooAnimals {
+            if i.classification == .mammal {
+                mammal.append(i)
+            } else {
+                if i.classification == .amphibian {
+                    amphibian.append(i)
+                } else {
+                    if i.classification == .insect {
+                        insect.append(i)
+                    } else {
+                        if i.classification == .reptile {
+                            reptile.append(i)
+                        } else {
+                            if i.classification == .bird {
+                                bird.append(i)
+                            }
+                        }
+                    }
+                }
+            }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allAnimals.count
+        switch section {
+        case 0:
+            return mammal.count
+        case 1:
+            return amphibian.count
+        case 2:
+            return insect.count
+        case 3:
+            return reptile.count
+        case 4:
+            return bird.count
+        default:
+            return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -35,18 +76,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
             return UITableViewCell()
     }
-    
+            
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+            switch section {
+            case 0:
+                return "Mammal"
+            case 1:
+                return "Amphibian"
+            case 2:
+                return "Insect"
+            case 3:
+                return "Reptile"
+            case 4:
+                return "Bird"
+            default:
+                return "will not execute"
+            }
+        }
+                
+            }
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,46 +112,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 //let cellIndexPath = tableView.indexPath(for: tappedAnimalCell)
             }
         }
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as? animalCell {
-//            cell.animalName.text = allAnimals[indexPath.row].name
-//            cell.animalImage.image = UIImage(named: String( allAnimals[indexPath.row].imageNumber))
-//            cell.animalOrigin.text = allAnimals[indexPath.row].origin
-//            return cell
-//        }
-//
-//        return UITableViewCell()
-//    }
-//            // 5. Copy most of this code from cellForRow
-//                    var cellMovie: Movie!
-//                    if cellIndexPath.section == 0 {
-//                        let actionMovies = self.filterMovies(for: .action)
-//                        cellMovie = actionMovies[cellIndexPath.row]
-//                    }
-//                    else if cellIndexPath.section == 1 {
-//                        let animatedMovies = self.filterMovies(for: .animation)
-//                        cellMovie = animatedMovies[cellIndexPath.row]
-//                    }
-//                    else {
-//                        let dramaticMovies = self.filterMovies(for: .drama)
-//                        cellMovie = dramaticMovies[cellIndexPath.row]
-//                    }
-//
-//                    // 6. set the destination MovieDetailViewController's selectedMovie property
-//                    movieDetailViewController.selectedMovie = cellMovie
-//
-//                    // 7. Set the properties of the MovieDetailViewController
-//                    //        movieDetailViewController.moviePosterImageView.image = UIImage(named: cellMovie.poster)
-//                    //        movieDetailViewController.genreLabel.text = "Genre: " + cellMovie.genre.capitalized
-//                    //        movieDetailViewController.locationLabel.text = "Locations: " + cellMovie.locations.joined(separator: ", ")
-//                    //        movieDetailViewController.summaryFullTextLabel.text = cellMovie.summary
-//                }
-//            }
-//        }
-    }
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-
-
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        separator()
+    tableView.dataSource = self
+    tableView.delegate = self
+                // Do any additional setup after loading the view, typically from a nib.
+            }
+}
+}
