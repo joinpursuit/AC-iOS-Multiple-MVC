@@ -32,6 +32,15 @@ class ZooAnimalDetailViewController: UIViewController {
     }
     
 
+    static func setUpFromStoryboard() -> ZooAnimalDetailViewController? {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+         if let viewController = storyBoard.instantiateViewController(withIdentifier: "ZooAnimalDetailViewController") as? ZooAnimalDetailViewController {
+            return viewController
+         }
+         else {
+            return nil
+        }
+    }
     /*
     // MARK: - Navigation
 
