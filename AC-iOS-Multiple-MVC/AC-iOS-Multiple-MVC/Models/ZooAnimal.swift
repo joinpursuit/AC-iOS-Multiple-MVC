@@ -21,6 +21,7 @@ class ZooAnimal {
         self.origin = origin
         self.classification = classification
         self.info = info
+        
     }
     
     static let zooAnimals: [ZooAnimal] = [
@@ -127,6 +128,14 @@ Zebras are equids – members of the horse family (Equidae) and are medium sized
 Zebras were the second species to diverge from the earliest proto-horses, after the asses, around 4 million years ago. The Grevy’s zebra is believed to have been the first zebra species to emerge.
 """)
     ]
+    
+    
+    static let mammals = ZooAnimal.zooAnimals.filter({$0.classification == "Mammal"})
+    static let amphibians = ZooAnimal.zooAnimals.filter({$0.classification == "Amphibian"})
+    static let reptiles = ZooAnimal.zooAnimals.filter({$0.classification == "Reptile"})
+    static let birds = ZooAnimal.zooAnimals.filter({$0.classification == "Bird"})
+    static let insects = ZooAnimal.zooAnimals.filter({$0.classification == "Insect"})
 }
+
 
 
