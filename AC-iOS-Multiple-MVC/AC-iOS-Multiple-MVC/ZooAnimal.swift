@@ -9,6 +9,15 @@
 import Foundation
 
 class ZooAnimal {
+    
+//    enum Classification {
+//        case mammal
+//        case amphibian
+//        case insect
+//        case reptile
+//        case bird
+//    }
+//
     let name: String
     let imageNumber: Int
     let origin: String
@@ -127,6 +136,14 @@ Zebras are equids – members of the horse family (Equidae) and are medium sized
 Zebras were the second species to diverge from the earliest proto-horses, after the asses, around 4 million years ago. The Grevy’s zebra is believed to have been the first zebra species to emerge.
 """)
     ]
+    
+    static let insects = ZooAnimal.zooAnimals.filter {$0.classification == "Insect"}
+    static let birds = ZooAnimal.zooAnimals.filter {$0.classification == "Bird"}
+    static let mammals = ZooAnimal.zooAnimals.filter {$0.classification == "Mammal"}
+    static let amphibians = ZooAnimal.zooAnimals.filter {$0.classification == "Amphibian"}
+    static let reptiles = ZooAnimal.zooAnimals.filter {$0.classification == "Reptile"}
+    
+    static let allAnimals = [mammals, amphibians, insects, reptiles, birds]
 }
 
 
