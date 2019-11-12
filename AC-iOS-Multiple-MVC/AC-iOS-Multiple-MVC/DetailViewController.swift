@@ -22,5 +22,6 @@ class DetailViewController: UIViewController{
         super.viewWillAppear(true)
         imageView.image = UIImage(named:String(anAnimal.imageNumber))
         textView.text = anAnimal.info
+        title = anAnimal.name
     }
 }
