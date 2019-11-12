@@ -50,25 +50,29 @@ class ViewController: UIViewController {
     }
 
     func filterAnimalsByClassification(_ arr: [ZooAnimal]) -> [[ZooAnimal]]{
-        var animalMatrix: [[ZooAnimal]] = [[],[],[],[],[]]
-       // var tempArr = arr
         
-        for element in arr{
-            switch element.classification{
-            case "Mammal":
-                animalMatrix[0].append(element)
-            case "Amphibian":
-                animalMatrix[1].append(element)
-            case "Reptile":
-                animalMatrix[2].append(element)
-            case "Insect":
-                 animalMatrix[3].append(element)
-            case "Bird":
-                animalMatrix[4].append(element)
-            default:
-                break
+        let tempArr = arr
+        
+        let sortedAnimals = tempArr.sorted { $0.classification < $1.classification}
+        let animalSet: Set<String> = Set(sortedAnimals.map {$0.classification})
+        var animalMatrix = Array(repeating: [ZooAnimal](), count: animalSet.count)
+        
+        for element in sortedAnimals{
+            print (element.classification)
+        }
+        
+        var currentIndex = 0
+        var currentClass = sortedAnimals.first?.classification ?? "Unknown"
+        for animal in sortedAnimals{
+            if animal.classification == currentClass{
+                animalMatrix[currentIndex].append(animal)
+            } else {
+                currentClass = animal.classification
+                currentIndex += 1
+                animalMatrix[currentIndex].append(animal)
             }
         }
+        
         return animalMatrix
     }
 }
@@ -93,17 +97,17 @@ extension  ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section{
         case 0:
-            return "Mammal"
+            return zooAnimals[section][0].classification
         case 1:
-            return "Amphibian"
+            return zooAnimals[section][0].classification
         case 2:
-            return "Reptile"
+            return zooAnimals[section][0].classification
         case 3:
-            return "Insect"
+            return zooAnimals[section][0].classification
         case 4:
-            return "Bird"
+            return zooAnimals[section][0].classification
         default:
-            return ""
+            return "Unknown"
         }
     }
 }
