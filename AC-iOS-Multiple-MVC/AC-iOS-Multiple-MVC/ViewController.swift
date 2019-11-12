@@ -35,18 +35,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let buttonReference = sender as? UITableViewCell, let segueReference = segue.destination as? DetailViewController else {
+        guard let indexPath = tableView.indexPathForSelectedRow, let segueReference = segue.destination as? DetailViewController else {
             return
         }
-        
-        segueReference.someImage = buttonReference.imageView?.image ?? UIImage()
-        for i in 0..<zooAnimals.count{
-           for j in 0..<zooAnimals[i].count{
-                if zooAnimals[i][j].name == buttonReference.textLabel?.text{
-                    segueReference.someText = zooAnimals[i][j].info
-                }
-            }
-        }
+        segueReference.anAnimal = zooAnimals[indexPath.section][indexPath.row]
     }
 
     func filterAnimalsByClassification(_ arr: [ZooAnimal]) -> [[ZooAnimal]]{
@@ -56,10 +48,6 @@ class ViewController: UIViewController {
         let sortedAnimals = tempArr.sorted { $0.classification < $1.classification}
         let animalSet: Set<String> = Set(sortedAnimals.map {$0.classification})
         var animalMatrix = Array(repeating: [ZooAnimal](), count: animalSet.count)
-        
-        for element in sortedAnimals{
-            print (element.classification)
-        }
         
         var currentIndex = 0
         var currentClass = sortedAnimals.first?.classification ?? "Unknown"
@@ -95,19 +83,6 @@ extension  ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section{
-        case 0:
-            return zooAnimals[section][0].classification
-        case 1:
-            return zooAnimals[section][0].classification
-        case 2:
-            return zooAnimals[section][0].classification
-        case 3:
-            return zooAnimals[section][0].classification
-        case 4:
-            return zooAnimals[section][0].classification
-        default:
-            return "Unknown"
-        }
+        return zooAnimals[section][0].classification
     }
 }

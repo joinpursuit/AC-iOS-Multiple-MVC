@@ -12,8 +12,7 @@ class DetailViewController: UIViewController{
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
-    var someImage : UIImage = UIImage()
-    var someText: String = ""
+    var anAnimal: ZooAnimal!
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class DetailViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        imageView.image = someImage
-        textView.text = someText
+        imageView.image = UIImage(named:String(anAnimal.imageNumber))
+        textView.text = anAnimal.info
     }
 }
