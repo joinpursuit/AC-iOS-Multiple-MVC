@@ -12,17 +12,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var zooAnimals = ZooAnimal.zooAnimals{
+    var zooAnimals = [[ZooAnimal]](){
         didSet{
-            //tableView.reloadData()
+            tableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tableView.reloadData()
+        //tableView.reloadData()
         tableView.dataSource = self
+        zooAnimals = ZooAnimal.getClassifications()
     }
 
 //    override func didReceiveMemoryWarning() {
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
             fatalError("ZooAnimalDVC, indexPath failed to be configured")
         }
         
-        zooAnimalsDVC.zooAnimal = zooAnimals[indexPath.row]
+        zooAnimalsDVC.zooAnimal = zooAnimals[indexPath.section][indexPath.row]
     }
 
 
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return zooAnimals.count
+        return zooAnimals[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +56,7 @@ extension ViewController: UITableViewDataSource{
         }
         
         
-        let zooAnimal = zooAnimals[indexPath.row]
+        let zooAnimal = zooAnimals[indexPath.section][indexPath.row]
         
         cell.configureCell(for: zooAnimal)
         
@@ -63,7 +64,13 @@ extension ViewController: UITableViewDataSource{
     }
     
     //section specific methods for the future
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return zooAnimals.count
+    }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return zooAnimals[section].first?.classification
+    }
     
 }
 
