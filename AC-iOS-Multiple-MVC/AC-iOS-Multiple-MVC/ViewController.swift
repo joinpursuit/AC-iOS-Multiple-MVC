@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         classifications = ZooAnimal.getClassifications()
         tableView.dataSource = self
+        tableView.delegate = self 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,4 +68,10 @@ extension ViewController: UITableViewDataSource {
         return classifications[section].first?.classification
     }
     
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 }
