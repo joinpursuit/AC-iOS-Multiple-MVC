@@ -127,6 +127,51 @@ Zebras are equids – members of the horse family (Equidae) and are medium sized
 Zebras were the second species to diverge from the earliest proto-horses, after the asses, around 4 million years ago. The Grevy’s zebra is believed to have been the first zebra species to emerge.
 """)
     ]
+    
+    // type method
+    // objective:
+    // is to creates an array of arrays
+    // we do that by using the classifications name as the section for the animals that belongs in it
+    static func getAnimals() -> [[ZooAnimal]] {
+      // goes through our countries array and sorts all the elements by continent
+      // < means ascending, e.g a....z
+      // > meand descending, e.g z.....a
+      let sortedClassifications = zooAnimals.sorted { $0.classification < $1.classification }
+      
+      // creates unique classification titles
+      let classificationTitles: Set<String> = Set(zooAnimals.map { $0.classification })
+      
+      var sectionsArr = Array(repeating: [ZooAnimal](), count: classificationTitles.count)
+      // created 5 empty arrays of type [Country]
+      // [[],[],[],[],[]]
+      
+      // iterate through our countries array and add to the relevant section
+      var currentIndex = 0
+      var currentClassification = sortedClassifications.first?.classification ?? "Pursuit" // e.g Asia
+      for classific in sortedClassifications {
+        if classific.classification == currentClassification {
+          // add to current section
+          sectionsArr[currentIndex].append(classific)
+        } else { // visiting a new continent
+          currentIndex += 1
+          currentClassification = classific.classification // updating the current continent's value
+          sectionsArr[currentIndex].append(classific)
+        }
+      }
+      return sectionsArr
+    }
+//
+//    var thumbnailImageName: String { // "ukrainr_tn"
+//      let str = name.components(separatedBy: " ").joined().description.lowercased()
+//      return str + "_tn"
+//    }
+    
+//    var fullImageName: String { // "ukraine"
+//       let str = name.components(separatedBy: " ").joined().description.lowercased()
+//       return str
+//    }
+    
+    
 }
 
 
